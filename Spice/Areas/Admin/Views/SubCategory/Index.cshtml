@@ -1,17 +1,18 @@
-﻿@model IEnumerable<Category>
+﻿@model IEnumerable<SubCategory>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<br /><br />
+<br />
+<br />
 <div class="border background-white background-padding-30">
     <div class="row">
         <div class="col-6">
-            <h2 class="text-info"> Category List</h2>
+            <h2 class="text-info">Sub Category List</h2>
         </div>
         <div class="col-6 text-right">
-            <partial name="_CreateButtonPartial"/>
+            <partial name="_CreateButtonPartial" />
         </div>
     </div>
     <br />
@@ -23,7 +24,9 @@
                     <th>
                         @Html.DisplayNameFor(model => model.Name)
                     </th>
-                    <th></th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Category.Name)
+                    </th>
                     <th></th>
                 </tr>
                 @foreach (var item in Model)
@@ -41,7 +44,7 @@
         </div>
     }
     else
-    { 
-        <p>No Category exits</p>
+    {
+        <p>No Sub Category exits</p>
     }
 </div>

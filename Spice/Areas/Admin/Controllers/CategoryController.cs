@@ -19,7 +19,7 @@ namespace Spice.Areas.Admin.Controllers
             _db = db;
         }
 
-        // GET
+        // GET - INDEX
         public async Task<IActionResult> Index()
         {
             return View(await _db.Category.ToListAsync());
