@@ -9,11 +9,11 @@ namespace Spice.Models
         public int Id { get; set; }
 
         [Required]
-        [Display(Name = "SubCategory Name")]
+        [Display(Name = "Sub Category Name")]
         public string Name { get; set; }
 
         [Required]
-        [Display(Name = "Category")]
+        [Display(Name = "Category Name")]
         public int CategoryId { get; set; }
 
         [ForeignKey("CategoryId")]
